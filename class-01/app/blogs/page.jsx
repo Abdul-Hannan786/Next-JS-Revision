@@ -6,6 +6,11 @@ const Blogs = () => {
     <div>
       <h1>Blogs</h1>
       <Link href="/">Home</Link>
+
+      <p>Blog 1</p>
+      <p>Blog 2</p>
+      <p>Blog 3</p>
+      <p>Blog 4</p>
     </div>
   );
 };
