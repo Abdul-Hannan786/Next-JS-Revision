@@ -1,12 +1,12 @@
 import Link from "next/link";
 import React from "react";
+import Header from "../Components/Header";
 
 const Services = () => {
   return (
-    <div className="flex items-center justify-center flex-col h-screen gap-4">
-      <h1 className="text-4xl">Services</h1>
-      <Link className="text-blue-400 text-xl" href="/">Home</Link>
-    </div>
+    <>
+      <h1 className="text-4xl">Services Page</h1>
+    </>
   );
 };
 

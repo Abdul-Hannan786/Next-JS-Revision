@@ -21,8 +21,8 @@ const Todos = async () => {
   console.log(todos, posts)
 
   return (
-    <div className="p-10">
-      <h1 className="text-2xl font-bold">Recent Posts</h1>
+    <div className="p-20">
+      <h1 className="text-2xl font-bold">Todos</h1>
       <div className="grid grid-cols-3 gap-5 mt-10">
         {todos.map(({ id, todo, completed }) => (
           <div
