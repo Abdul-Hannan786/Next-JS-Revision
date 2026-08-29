@@ -1,7 +1,24 @@
+
+const fetchData = async (url) => {
+  const response = await fetch(url)
+  return await response.json()
+}
 const Todos = async () => {
-  const response = await fetch("https://dummyjson.com/todos?limit=8");
-  const { todos } = await response.json();
-  console.log(todos);
+  // const response = await fetch("https://dummyjson.com/todos?limit=8");
+  // const { todos } = await response.json();
+  // console.log(todos);
+
+  const [{todos}, {posts}] = await Promise.all([
+    fetchData("https://dummyjson.com/todos?limit=5"),
+    fetchData("https://dummyjson.com/posts?limit=5"),
+  ]);
+
+  // const [{todos}, {posts}] = await Promise.all([
+  //   todosResponse.json(),
+  //   postsResponse.json(),
+  // ]);
+
+  console.log(todos, posts)
 
   return (
     <div className="p-10">
