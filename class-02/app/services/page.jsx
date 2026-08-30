@@ -1,11 +1,24 @@
-import Link from "next/link";
-import React from "react";
-import Header from "../Components/Header";
+import ServiceItem from "../Components/ServiceItem";
+import ServiceList from "../Components/ServiceList";
 
 const Services = () => {
+  const services = [
+    "Web Development",
+    "Mobile App Development",
+    "Consulting Services",
+    "Digital Marketing",
+  ];
+
   return (
     <>
-      <h1 className="text-4xl">Services Page</h1>
+      <div>
+        <h1>Our Services</h1>
+        <ServiceList>
+          {services.map((service) => (
+            <ServiceItem key={service} serviceName={service} />
+          ))}
+        </ServiceList>
+      </div>
     </>
   );
 };
