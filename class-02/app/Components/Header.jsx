@@ -4,9 +4,11 @@ import Link from "next/link";
 import { usePathname } from "next/navigation"; // for checking current route
 import SunIcon from "./SunIcon";
 import MoonIcon from "./MoonIcon";
+import { useSelector } from "react-redux";
 
 export default function Header() {
-  const isDark = true;
+  // const isDark = true;
+  const isDark = useSelector((state) => state.theme.isDark);
   const pathname = usePathname();
   return (
     <nav className="navbar">
