@@ -4,11 +4,13 @@ import Link from "next/link";
 import { usePathname } from "next/navigation"; // for checking current route
 import SunIcon from "./SunIcon";
 import MoonIcon from "./MoonIcon";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { toggleTheme } from "../redux/features/themeSlice";
 
 export default function Header() {
   // const isDark = true;
   const isDark = useSelector((state) => state.theme.isDark);
+  const dispatch = useDispatch();
   const pathname = usePathname();
   return (
     <nav className="navbar">
@@ -41,11 +43,7 @@ export default function Header() {
         </li>
       </ul>
 
-      <button
-        onClick={() => {
-          console.log("Theme button clicked");
-        }}
-      >
+      <button onClick={() => dispatch(toggleTheme())}>
         {isDark ? <SunIcon /> : <MoonIcon />}
       </button>
     </nav>

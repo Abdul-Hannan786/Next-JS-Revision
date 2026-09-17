@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 
 const ThemeManager = () => {
   const isDark = useSelector((state) => state.theme.isDark);
-  console.log(isDark)
+  // console.log(isDark)
 
   useEffect(() => {
     if (isDark) {
