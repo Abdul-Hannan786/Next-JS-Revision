@@ -11,7 +11,7 @@ const ThemeManager = () => {
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("isDark");
-    console.log(savedTheme);
+    // console.log(savedTheme);
     if (savedTheme !== null) {
       dispatch(setTheme(savedTheme === "true"));
     }

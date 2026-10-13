@@ -10,7 +10,7 @@ export const themeSlice = createSlice({
       state.isDark = !state.isDark;
     },
     setTheme: (state, action) => {
-      console.log(action.payload);
+      // console.log(action.payload);
       state.isDark = action.payload;
     },
   },

@@ -7,10 +7,15 @@ const Posts = () => {
 
   const fetchPosts = async () => {
     const response = await fetch("https://dummyjson.com/posts?limit=4");
-    const {posts} = await response.json();
+    const { posts } = await response.json();
     setPosts(posts);
     console.log(posts);
   };
+
+  // const randomNumber = Math.random();
+  // if (randomNumber > 0.5) {
+  //   throw "Something Went Wrong";
+  // }
 
   useEffect(() => {
     fetchPosts();
@@ -21,7 +26,10 @@ const Posts = () => {
       <h1 className="text-2xl font-bold">Recent Posts</h1>
       <div className="grid grid-cols-2 gap-5 mt-10">
         {posts?.map(({ id, title, body }) => (
-          <div key={id} className="shadow p-6 rounded-xl bg-mist-800 hover:scale-103 transition cursor-pointer">
+          <div
+            key={id}
+            className="shadow p-6 rounded-xl hover:scale-103 transition cursor-pointer"
+          >
             <h2 className="text-lg font-semibold">{title}</h2>
             <p className="mt-5 text-[16px]">{body}</p>
           </div>

@@ -41,6 +41,16 @@ export default function Header() {
             Services
           </Link>
         </li>
+        <li>
+          <Link
+            href="/posts"
+            className={
+              pathname === "/posts" ? "nav-link active" : "nav-link"
+            }
+          >
+            Posts
+          </Link>
+        </li>
       </ul>
 
       <button onClick={() => dispatch(toggleTheme())}>
