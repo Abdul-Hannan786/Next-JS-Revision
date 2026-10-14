@@ -1,12 +1,23 @@
 "use client";
 
-import React from "react";
+import { useRouter } from "next/navigation";
+import React, { startTransition } from "react";
 
-const Error = ({ error }) => {
+const Error = ({ error, reset }) => {
   console.log(error);
+  const router = useRouter();
   return (
     <div>
-      <p>{error}</p>
+      <p>Something Went Wrong</p>
+      <button
+        onClick={() => {
+          startTransition(() => {
+            
+          });
+        }}
+      >
+        Try Again
+      </button>
     </div>
   );
 };
