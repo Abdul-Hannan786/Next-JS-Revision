@@ -1,4 +1,5 @@
 // "use client";
+import styles from "./posts.module.css"
 
 // import { useEffect, useState } from "react";
 
@@ -24,7 +25,7 @@ const Posts = () => {
 
   return (
     <div className="p-10">
-      <h1 className="text-2xl font-bold">Recent Posts</h1>
+      <h1 className={styles.title}>Recent Posts</h1>
       <div className="grid grid-cols-2 gap-5 mt-10">
         {/* {posts?.map(({ id, title, body }) => (
           <div

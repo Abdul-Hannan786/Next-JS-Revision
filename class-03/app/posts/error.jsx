@@ -12,7 +12,8 @@ const Error = ({ error, reset }) => {
       <button
         onClick={() => {
           startTransition(() => {
-            
+            router.refresh();
+            reset();
           });
         }}
       >

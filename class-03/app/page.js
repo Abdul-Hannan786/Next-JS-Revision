@@ -1,11 +1,9 @@
-import Link from "next/link";
-import React from "react";
-import Header from "./Components/Header";
-
+import styles from "./home.module.css";
 const page = () => {
+  console.log(styles)
   return (
     <>
-      <h1 className="text-4xl">Home Page</h1>
+      <h1 className={styles.title}>Home Page</h1>
     </>
   );
 };
