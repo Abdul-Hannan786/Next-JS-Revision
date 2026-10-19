@@ -6,7 +6,13 @@ const Home = () => {
     <div className="">
       <h1 className="text-4xl">Home</h1>
       {/* <img src="/image.jpg" className="w-[300px]" alt="" /> */}
-      <Image src="/image.jpg" width={400} height={300} alt="Studing image" />
+      <Image
+        src="/image.jpg"
+        width={400}
+        height={300}
+        alt="Studying image"
+        className="w-75"
+      />
     </div>
   );
 };
